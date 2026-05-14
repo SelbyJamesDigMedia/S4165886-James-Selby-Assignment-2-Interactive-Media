@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="AphexTwin.ico" type="image/x-icon">
+
+    <title>Aphex Twin - T69 Collapse</title>
+    <!-- add the font family of your choice -->
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Aphex Twin - T69 Collapse</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+      <!-- Media Player Section -->
+      <div class="media-player">
+        <video id="custom-video-player">
+          <source
+            src="Aphex Twin - T69 Collapse Compressed.mp4"
+            type="video/mp4"
+          />
+        </video>
+        
+        <div class="custom-controls">
+
+          <button id="skip-to-start-btn" aria-label="Skip to Start">
+            <img
+            id="skip-to-start-img"
+            src="https://img.icons8.com/?size=100&id=11684&format=png&color=000000"
+            alt="Skip to Start"
+            width="24"
+            />
+          </button>
+
+          <button id="play-pause-btn" aria-label="Play/Pause">
+            <img
+              id="play-pause-img"
+              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+              alt="Play/Pause"
+              width="24"
+            />
+          </button>
+
+          <button id="repeat-btn" aria-label="Repeat">
+            <img
+            id="repeat-img"
+            src="https://img.icons8.com/?size=100&id=HztDKnQI80jV&format=png&color=000000"
+            alt="Repeat"
+            width="24"
+            />
+          </button>
+          
+          <button id="random-time-btn" aria-label="Random Time">
+            <img
+            id="random-time-img"
+            src="https://img.icons8.com/?size=100&id=RBNIqU8jJHdD&format=png&color=000000"
+            alt="Random Time"
+            width="24"
+            />
+          </button>
+
+          <!-- add the missing buttons or functionality here -->
+          <div class="progress-bar">
+            <span id="progress-bar-fill"></span>
+          </div>
+
+          <div class="time">
+         <span id="video-time-value"></span>
+          </div>
+
+          <button id="fullscreen-btn" aria-label="Fullscreen">
+            <img
+            id="fullscreen-img"
+            src="https://img.icons8.com/?size=100&id=38034&format=png&color=000000"
+            alt="Fullscreen"
+            width="24"
+            />
+          </button>
+
+
+        </div>
+      </div>
+
+        <div class="volume-controls">
+          <button id="mute-btn" aria-label="Mute">
+          <img
+          id="mute-img"
+          src="https://img.icons8.com/?size=100&id=OC2elREGfQ1m&format=png&color=000000"
+          alt="Mute"
+          width="15"
+          />
+        </button>
+
+          <input
+            id="volume-slider"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="50"
+          />
+          <p>Volume: <span id="volume-value"></span></p>
+        
+        </div>
+
+      <!-- Additional Content Section -->
+      <section>
+        <h2>T69 Collapse</h2>
+        <p>Song by Aphex Twin, Published by Warp Records, Video by Weirdcore</p>
+        <!-- Add more content as needed -->
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>Aphex Twin 2018, <a href="https://www.youtube.com/watch?v=SqayDnQ2wmw">Aphex Twin – T69 Collapse</a>, YouTube, 7 August, <a href="https://www.youtube.com/watch?v=SqayDnQ2wmw">https://www.youtube.com/watch?v=SqayDnQ2wmw</a></p>
+      <p>All icons sourced from <a href="https://icons8.com">Icons8</a></p>
+      
+    </footer>
+  </body>
+</html>
