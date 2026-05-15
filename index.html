@@ -8,13 +8,15 @@
     <link rel="icon" href="AphexTwin.ico" type="image/x-icon">
 
     <title>Aphex Twin - T69 Collapse</title>
-    <!-- add the font family of your choice -->
      
-    
+    <!-- I chose to use a pixelated font to match the digital decay style of the video.
+     I wanted the user to be as immersed in what they are viewing on the website.
+     The pixelated font gave a glitchy and retro feel similar to what is displayed in the video-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 
+    <!-- links the reset css and style css to the html file-->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -30,15 +32,24 @@
       <!-- Media Player Section -->
       <div class="media-player">
         <video id="custom-video-player">
+          <!-- Takes the video from the files of the repository instead of a youtube imbedded video.
+           I chose to directly source the video so that it was clean of any unwanted controls an imbedded youtube link would come with-->
           <source
             src="Aphex Twin - T69 Collapse Compressed.mp4"
             type="video/mp4"
           />
         </video>
         
+        <!-- Creates a container for the upper controls including the progress bar-->
         <div class="custom-controls">
 
+          <!-- I created a skip to start button to give an easy way for the user to restart the video.
+           Having a non interactable progress bar means that this is the only way for the user to be able to restart the video apart from the fullscreen controls-->
+           <!-- the "aria-label" allows for a label prompting the user what the buttons function is when they hover over the button-->
           <button id="skip-to-start-btn" aria-label="Skip to Start">
+
+            <!-- Loads the restart symbol image
+             I removed the height value as it stretched the symbols vertically which isn't visually appealing-->
             <img
             id="skip-to-start-img"
             src="https://img.icons8.com/?size=100&id=11684&format=png&color=000000"
@@ -46,8 +57,10 @@
             width="24"
             />
           </button>
-
+          
+          <!-- Kept in the play/pause button as it is the fundamental control button of a media player experience-->
           <button id="play-pause-btn" aria-label="Play/Pause">
+            <!--loads the starting image of the button being the play symbol-->
             <img
               id="play-pause-img"
               src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
@@ -56,6 +69,8 @@
             />
           </button>
 
+          <!-- I created a repeat/loop button for the user to repeat the video at the users wish.
+           I chose to include this feature as since this website is revolving around one song from the artist, it would be better to include a repeat button then having to manually press play again everytime the video restarts-->
           <button id="repeat-btn" aria-label="Repeat">
             <img
             id="repeat-img"
@@ -65,6 +80,8 @@
             />
           </button>
           
+          <!-- To fit the digital decay and glitchy aesthetic, I included a random time button as the only way to navigate to a different point in the video apart from restarting it
+           The unpredictability of where the user will land in the video is interesting as the visuals along with the music are constantly changing and never the same in two points of the video-->
           <button id="random-time-btn" aria-label="Random Time">
             <img
             id="random-time-img"
@@ -79,10 +96,12 @@
             <span id="progress-bar-fill"></span>
           </div>
 
+          <!--I added a time value next to the progress bar to precisely indicate what position of the video they are at-->
           <div class="time">
          <span id="video-time-value"></span>
           </div>
 
+          <!--Fullscreen was included as a way of enlarging the video for the user as they may want to view the video by itself-->
           <button id="fullscreen-btn" aria-label="Fullscreen">
             <img
             id="fullscreen-img"
@@ -96,6 +115,8 @@
         </div>
       </div>
 
+        <!--Volume controls were essential for my project, the website being based around showcasing a song from Aphex Twin.
+        Not including any form of volume control could lead to frustration with how quiet or loud the song plays on the user's device-->
         <div class="volume-controls">
           <button id="mute-btn" aria-label="Mute">
           <img
@@ -106,6 +127,9 @@
           />
         </button>
 
+        <!-- This code includes a volume slider, the minimum value being 0, the maximum value being 100 and the step between values being 1.
+         The slider by default starts at the value of 50 allowing for the user to adjust the song louder or quieter
+         Code was drawn from: https://www.w3schools.com/howto/howto_js_rangeslider.asp-->
           <input
             id="volume-slider"
             type="range"
@@ -114,6 +138,9 @@
             step="1"
             value="50"
           />
+
+          <!-- To give the user an accurate indication of what level their volume is at, I included a value to the right of the volume slider correlating to the value of the slider
+           influence was taken from here: https://www.youtube.com/watch?v=NT0bU11zVcI-->
           <p>Volume: <span id="volume-value"></span></p>
         
         </div>
@@ -122,7 +149,6 @@
       <section>
         <h2>T69 Collapse</h2>
         <p>Song by Aphex Twin, Published by Warp Records, Video by Weirdcore</p>
-        <!-- Add more content as needed -->
       </section>
     </main>
 

@@ -1,4 +1,6 @@
 :root {
+
+  /* I adjusted the original colour sheme provided to better suit the style of the video, taking colours directly from the T69 Collapse video*/
   --primary-bg-color: #0D0D0D;
   --text-color: #ffffff;
   --main-bg-color: #BF604B;
@@ -15,10 +17,12 @@ ul {
   padding: 0;
 }
 textarea{
+  /* This links the pixellated text to all of the text elements*/
   font-family: "Pixellify Sans", sans-serif;
 }
 
 body {
+  /* changes the website background colour and text colour*/
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -56,6 +60,7 @@ header {
   max-width: 100%;
 }
 
+/* stlyes the top part of controls*/
 .custom-controls {
   display: flex;
   justify-content: space-between;
@@ -65,6 +70,7 @@ header {
   width: 100%;
 }
 
+/* stlyes the top controls buttons*/
 .custom-controls button {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
@@ -76,6 +82,7 @@ header {
   align-items: center;
 }
 
+/* styles the volume controls*/
 .volume-controls {
   display: flex;
   align-items: left;
@@ -84,6 +91,7 @@ header {
   width: 100%;
 }
 
+/* styles the volume controls buttons*/
 .volume-controls button {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
@@ -95,13 +103,13 @@ header {
   align-items: center;
 }
 
+/* This alters the width of the volume slider and changes the colour to the progress bar colour*/
 #volume-slider {
   width: 100px;
-  border: 2px solid;
   accent-color: var(--progress-bar-color)
 }
 
-
+/* styles the progress bar container*/
 .progress-bar {
   width: 90%;
   height: 10px;
@@ -110,6 +118,7 @@ header {
   overflow: hidden;
 }
 
+/* styles the progress bar line*/
 .progress-bar span {
   display: block;
   height: 100%;
@@ -118,6 +127,7 @@ header {
   transition: width 0.3s ease;
 }
 
+/* this styling is for the video time indication on the right of the progress bar*/
 .time {
   border: none;
   padding: 8px 12px;
